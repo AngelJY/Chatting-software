@@ -1,0 +1,35 @@
+import javax.swing.*;
+
+
+public class MyFrame extends JFrame {
+	JTextPane textShow;
+	JTextArea textArea;
+	JLabel label1,label2,label3; 
+	JTextField textField1,textFiled2;
+	public MyFrame(){
+		setTitle("Talk what you want to talk to me");
+		setBounds(450,100,750,650);
+		setLayout(null);
+		init();
+		setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+	void init(){
+		textShow = new JTextPane();
+		textShow.setBounds(10,10,600,420);
+		add(textShow);
+		
+		textArea = new JTextArea();
+		textArea.setBounds(10,450,600,100);
+		add(textArea);
+		
+		label1 = new JLabel("昵称");
+		label1.setBounds(20,630,20,10);
+		add(label1);
+		
+		label2 = new JLabel("目标IP");
+		label3 = new JLabel("目标端口");
+		
+	}
+
+}

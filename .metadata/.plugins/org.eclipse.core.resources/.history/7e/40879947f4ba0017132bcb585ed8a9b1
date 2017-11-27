@@ -1,0 +1,45 @@
+import java.awt.Font;
+
+import javax.swing.*;
+
+
+public class MyFrame extends JFrame {
+	JTextPane textShow;
+	JTextArea textArea;
+	JLabel label1,label2,label3; 
+	JTextField textField1,textFiled2;
+	public MyFrame(){
+		setTitle("Talk what you want to talk to me");
+		setBounds(450,100,750,650);
+		setLayout(null);
+		init();
+		setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+	void init(){
+		textShow = new JTextPane();
+		textShow.setBounds(10,10,550,420);
+		add(textShow);
+		
+		textArea = new JTextArea();
+		textArea.setBounds(10,450,550,100);
+		add(textArea);
+		
+		label1 = new JLabel("昵称:");
+		label1.setBounds(580,30,100,30);
+		label1.setFont(new Font("宋体",Font.BOLD,25));
+		add(label1);
+		
+		label2 = new JLabel("目标IP:");
+		label2.setBounds(580,200,100,30);
+		label2.setFont(new Font("宋体",Font.BOLD,25));
+		add(label2);
+		
+		label3 = new JLabel("目标端口:");
+		label3.setBounds(580,400,150,20);
+		label3.setFont(new Font("宋体",Font.BOLD,25));
+		add(label3);
+		
+	}
+
+}
